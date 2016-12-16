@@ -1,9 +1,9 @@
 package stacksandqueues;
 
-class Stack{
+class stack{
 	int[] stack;
 	int top,size;
-	public Stack(int s){
+	public stack(int s){
 		stack=new int[s];
 		size=s;
 		top=-1;
@@ -38,7 +38,7 @@ class Stack{
 public class StacksApp {
 	
 	public static void main(String[] args){
-Stack s=new Stack(10);
+stack s=new stack(10);
 //System.out.println(s.getSize());
 s.push(10);
 s.push(23);
