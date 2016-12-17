@@ -37,7 +37,7 @@ class queue{
 	
 //	check is Queue empty
 	public boolean isEmpty(){
-		if(rear<0 || front<0){
+		if((rear<0 && front<0) || (front>=Size && rear>=Size)){
 			return true;
 		}
 		return false;
@@ -62,16 +62,18 @@ public class QueueApp {
 	
 public static void main(String[] args){
 	queue Q=new queue(4);
+	System.out.println(Q.isEmpty());
 	Q.insert(1);
 	Q.insert(12);
 	Q.insert(10);
 	Q.insert(10);
 	Q.insert(10);
 	System.out.println(Q.getFirst());
-	
+	System.out.println(Q.isEmpty());
 	System.out.println(Q.remove());
 	System.out.println(Q.remove());
 	System.out.println(Q.getFirst());
 	System.out.println(Q.getFirst());
+	System.out.println(Q.isEmpty());
 }
 }
