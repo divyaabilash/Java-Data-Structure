@@ -5,14 +5,15 @@ class queue{
 	int front;
 	int rear;
 	long[] Q;
-	
+//	construcutor
 	public queue(int size){
 		Size=size-1;
 		Q=new long[size];
 		front=-1;
 		rear=-1;
 	}
-	
+
+//	insertion of the data to the rear
 	public void insert(long data){
 		if(rear <Size){
 		Q[++rear]=data;
@@ -24,6 +25,7 @@ class queue{
 		}
 	}
 	
+//	removing from the front
 	public long remove(){
 		if(front <= Size){
 			return Q[front++];
@@ -33,6 +35,7 @@ class queue{
 			return 0;
 	}
 	
+//	check is Queue empty
 	public boolean isEmpty(){
 		if(rear<0 || front<0){
 			return true;
@@ -40,9 +43,9 @@ class queue{
 		return false;
 	}
 
-	
+//	removing first element of the 
 	public long getFirst(){
-		if(front <= Size){
+		if(front <= Size && front<=rear){
 			return Q[front++];
 			}else{
 			System.out.println("The Queue is Empty");
@@ -50,14 +53,7 @@ class queue{
 			return 0;
 	}
 	
-	public long getLast(){
-		if(rear>-1 && rear>=front ){
-		return Q[rear--];
-		}else{
-			System.out.println("The Queue is Empty");
-		}
-		return 0;
-	}
+	
 }
 
 
@@ -75,7 +71,7 @@ public static void main(String[] args){
 	
 	System.out.println(Q.remove());
 	System.out.println(Q.remove());
-	System.out.println(Q.getLast());
-	System.out.println(Q.getLast());
+	System.out.println(Q.getFirst());
+	System.out.println(Q.getFirst());
 }
 }
