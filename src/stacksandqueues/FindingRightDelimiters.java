@@ -15,9 +15,10 @@ public class FindingRightDelimiters {
 		String s="{a[b(c)D]e}";
 		boolean notfound= false;
 		int pos=0;
+		
 		Stack s1= new Stack();
-		for(int i=0;i<s.length();i++){
-			
+
+	for(int i=0;i<s.length();i++){
 			char c = s.charAt(i);
 			switch(c){
 			case '{':
@@ -39,7 +40,6 @@ public class FindingRightDelimiters {
 			}else{
 				pos=i;
 				notfound = true;
-				
 			}
 			}
 			}else{
